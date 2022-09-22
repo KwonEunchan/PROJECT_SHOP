@@ -1,0 +1,90 @@
+.intro {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  position: relative;
+  transition: .7s;
+
+  &.logon{
+    height: 0vh;
+    visibility: hidden;
+  }
+
+  @keyframes introShow {
+    0% {
+      top: 35vh;
+    }
+    100% {
+      top: 20vh;
+      opacity: 1;
+    }
+  }
+
+  .logo {
+    width: 70vw;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    opacity: 0;
+    animation: introShow .7s linear forwards;
+  }
+
+  .subText {
+    width: 70vw;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50vh;
+    margin: auto;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+  }
+
+  .btnBox {
+    width: 40vw;
+    height: 20vh;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 15vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .btn {
+      width: 35%;
+      height: 50%;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 700;
+      font-size: 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: .2s;
+
+      &:hover {
+        scale: 1.02;
+        opacity: .9;
+      }
+
+      &:active {
+        scale: 0.98;
+      }
+
+      &.btnLogin {
+        color: black;
+        background-color: #FFE05C;
+      }
+
+      &.btnJoin {
+        color: black;
+        background-color: #EAEAEA;
+      }
+    }
+  }
+}

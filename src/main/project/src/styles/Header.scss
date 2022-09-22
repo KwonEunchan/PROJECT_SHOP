@@ -1,0 +1,64 @@
+.header {
+  width: 100vw;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  color: black;
+  justify-content: space-around;
+
+  .logo {
+    width: 20vw;
+  }
+
+
+  p {
+    width: 20vw;
+    font-size: 1.5vw;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    .material-symbols-outlined {
+      transition: .5s;
+
+      &.active {
+        transform: rotate(180deg);
+      }
+    }
+
+    &:hover > .userIntro {
+      text-decoration: underline;
+    }
+  }
+}
+.userNavMenu{
+  width: 30vw;
+  height: 0vh;
+  right: 10vw;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  transition: .5s;
+  visibility: hidden;
+  z-index: 1;
+
+  &.active{
+    height: 1vh;
+    color: black;
+    visibility: visible;
+  }
+
+  li{
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 400;
+    &:hover{
+      color: #FC5230;
+      font-weight: 700;
+    }
+  }
+}

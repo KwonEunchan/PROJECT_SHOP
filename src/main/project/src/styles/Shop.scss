@@ -1,0 +1,152 @@
+@keyframes showForm {
+  0% {
+    top: 20%
+  }
+  100% {
+    top: 0;
+  }
+}
+
+.shopPage {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(black,.4);
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  .shopBox {
+    width: 80vw;
+    height: 80vh;
+    background-color: rgba(white,.9);
+    box-shadow: 0 0 10px 0 rgba(black, .4);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    animation: showForm .2s linear forwards;
+
+    .shopTitle {
+      width: 100%;
+      color: black;
+      font-size: 3vw;
+      text-align: center;
+    }
+    .category{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      color: black;
+      width: 20%;
+      height: 5%;
+
+      .subCategory{
+        width: 30%;
+        text-align: center;
+        font-size: 1.2vw;
+        font-weight: 400;
+        cursor: pointer;
+
+        &:hover{
+          font-weight: 700;
+        }
+        &.focus{
+          font-weight: 700;
+          color: #FC5230;
+        }
+      }
+    }
+
+    .shopBody{
+      width: 70%;
+      height: 70%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      .shopAlert{
+        font-size: 2.5vw;
+        color: black;
+      }
+
+      .item{
+        width: 30%;
+        height: 80%;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        color: black;
+        box-shadow: 0 0 5px 0 rgba(black,.2);
+
+        &.soldOut{
+          opacity: .4;
+        }
+
+        img{
+          width: 80%;
+          background-size: cover;
+          background-position: center;
+        }
+
+        .itemName{
+          font-size: 1.5vw;
+        }
+        .itemPrice{
+          font-size: 1vw;
+        }
+        .btnBox{
+          width: 70%;
+          height: 10%;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+
+          .btn{
+            width: 40%;
+            height: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1vw;
+            cursor: pointer;
+            color: white;
+            box-shadow: 0 0 4px 0 rgba(black,.3);
+
+            &:hover{
+              opacity: .7;
+            }
+
+            &.btnBuy{
+              background-color: #5d5959;
+            }
+            &.btnCart{
+              background-color: #F2F2F2;
+              color: black;
+            }
+          }
+        }
+      }
+    }
+
+    .btnCancel {
+      width: 5vw;
+      height: 5vh;
+      background-color: #FC5230;
+      border-radius: 5px;
+      font-size: 14px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+}
